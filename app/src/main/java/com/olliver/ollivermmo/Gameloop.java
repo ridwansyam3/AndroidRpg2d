@@ -10,13 +10,15 @@ import java.util.Observer;
 public class Gameloop extends Thread{
     private static final double MAX_UPS =60.0;
     private static final double UPS_PERIOD = 1E+3/MAX_UPS;
-    private boolean isRunning = false;
-    private SurfaceHolder surfaceHolder;
     private Game game;
+    private SurfaceHolder surfaceHolder;
+
+    private boolean isRunning = false;
     private double averageUPS;
     private double averageFPS;
 
     public Gameloop(Game game, SurfaceHolder surfaceHolder) {
+        this.game = game;
         this.surfaceHolder = surfaceHolder;
     }
 

@@ -23,7 +23,7 @@ public class Game extends SurfaceView implements SurfaceHolder.Callback {
 
         //looping game
         this.context = context;
-        Gameloop gameloop = new Gameloop(this,surfaceHolder);
+        gameloop = new Gameloop(this,surfaceHolder);
         setFocusable(true);
     }
 
